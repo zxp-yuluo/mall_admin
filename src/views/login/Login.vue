@@ -3,7 +3,7 @@
 </script>
 <template>
   <div class="login">
-    Login组件
+    <el-button type="primary">Primary</el-button>
   </div>
 </template>
 <style scoped>
