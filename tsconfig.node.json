@@ -10,12 +10,10 @@
   "compilerOptions": {
     "composite": true,
     "module": "ESNext",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "lib": [
-      "DOM",
-      "ES6"
+      "ES6",
+      "DOM"
     ]
   }
 }

@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
   
 </script>
 <template>
   <div class="admin">
-    Admin组件
+    <el-button type="success" plain>Admin组件</el-button>
   </div>
 </template>
 <style scoped>

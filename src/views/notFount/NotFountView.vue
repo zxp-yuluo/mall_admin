@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
   
 </script>
 <template>
   <div class="notFount">
-    notFount
+    404
   </div>
 </template>
 <style scoped>

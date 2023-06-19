@@ -1,29 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Login from '../views/login/Login.vue'
-import notFount from '@/views/404/notFount.vue'
+import LoginView from "../views/login/LoginView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      redirect: { name: 'login' },
-    },
-    {
-      path: '/login',
       name: 'login',
-      component: Login
+      component: LoginView
     },
     {
       path: '/admin',
       name: 'admin',
-      component: () => import('../views/admin/Admin.vue')
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/admin/AdminView.vue')
     },
     {
-      path: '/:catchAll(.*)',
-      name: 'notfount',
-      component: notFount
+      path: "/:error*",
+      name: "notFaont",
+      component: () => import('../views/notFount/NotFountView.vue')
     }
+    // {
+    //   path: '/:catchAll(.*)',
+    //   name: 'notfount',
+    //   component: () => import('../views/notFount/NotFountView.vue')
+    // }
   ]
 })
 
